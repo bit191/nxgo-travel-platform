@@ -1,57 +1,50 @@
----
-
-## Option B: Use this if your codebase is PURELY frontend (`localStorage` based)
-
-If you haven't actually built the Node.js or MySQL backend, use your original file text. Here it is cleaned up with professional formatting. Copy and paste this block into your `README.md`:
-
-```markdown
 # Nxgo — Your Taiwan Buddy
 
-A multi-page travel companion platform for exploring Taiwan, built as a university Database Management final project. Nxgo connects travelers with local buddies, eco-activities, and a community forum — fully simulated client-side utilizing the browser's `localStorage` data plane.
+A multi-page travel companion platform for exploring Taiwan, built as a university Database Management final project. Nxgo connects travelers with local buddies, eco-activities, and a community forum — all powered by the browser's `localStorage` as a client-side database.
 
 ---
 
 ## 🚀 Features
 
-- **User Authentication** — Register, login, and logout with stateful session tracking. Profile and Dashboard pages are dynamically route-guarded.
-- **Data Management (CRUD)** — Create, read, update, and delete travel activities seamlessly on the Destinations page. Changes instantly persist across reloads.
-- **Smart Search & Retrieval** — Flexible keyword querying parsing through string parameters, including category and tag parameters.
-- **Interactive Forum** — Post stories, log questions, and reply to community threads natively inside the Profile UI.
-- **Analytics Dashboard** — Dynamic charts rendering user signups, engagement metrics over time, and geographical interest sectors powered by live engine records using Chart.js.
+- **User Authentication** — Register, login, and logout with session management. Profile and Dashboard pages are protected.
+- **Data Management (CRUD)** — Create, read, update, and delete travel activities on the Destinations page. All changes persist in `localStorage`.
+- **Search & Retrieval** — Keyword search with category and interest-tag filters. Graceful "no results" state.
+- **Interactive Forum** — Post stories, ask questions, and reply with comments on the Profile page. Updates appear instantly.
+- **Analytics Dashboard** — Admin dashboard with Chart.js visualizations: signups, posts over time, category/interest distribution, and most-viewed destinations. All numbers come from live `localStorage` data.
 
 ---
 
 ## 🗺️ Page Mapping
 
 | Page | File | Description |
-|------|------|-------------|
-| **Home** | `index.html` | Landing module, exploration cards, and discovery matrices. |
-| **Destinations** | `destinations.html` | Activity indexes, localized sections, search parameters, and structural CRUD controls. |
-| **Gallery** | `gallery.html` | Visual curation grid displaying location assets. |
-| **Profile** | `profile.html` | Managed member portal containing individual forum entries. |
-| **Dashboard** | `dashboard.html` | Metrics board visualization framework (Admin privileges required). |
-| **Login** | `login.html` | Access authentication interface. |
-| **Register** | `register.html` | Identity generation portal. |
+| :--- | :--- | :--- |
+| **Home** | `index.html` | Hero, discovery cards, destination grid, interest pills |
+| **Destinations** | `destinations.html` | Activity cards, Taichung section, search + CRUD |
+| **Gallery** | `gallery.html` | Photo collage and travel quote grid |
+| **Profile** | `profile.html` | User profile, memories grid, forum feed (login required) |
+| **Dashboard** | `dashboard.html` | Analytics charts (admin login required) |
+| **Login** | `login.html` | Split-panel login form |
+| **Register** | `register.html` | Split-panel registration form |
 
 ---
 
-## 📁 Repository File Architecture
+## 🔒 Demo Login Credentials
 
-```text
-├── index.html              # Home page layout
-├── destinations.html       # Management module
-├── gallery.html            # Asset gallery
-├── profile.html            # Profile ecosystem & interactive forum
-├── dashboard.html          # Metric analysis display
-├── login.html              # Sign-in pipeline
-├── register.html           # Account creation pipeline
-├── css/
-│   └── style.css           # Global template styles
-└── js/
-    ├── seed.js             # Initial dummy mock dataset
-    ├── data.js             # Core CRUD management execution file
-    ├── auth.js             # Validation scripts
-    ├── app.js              # Global system layout definitions
-    ├── destinations.js     # Search mechanics execution engine
-    ├── profile.js          # Thread generation utilities
-    └── dashboard.js        # Analytics calculation pipeline (Chart.js)
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Traveler** | `kim@nxgo.tw` | `password123` |
+| **Admin** | `admin@nxgo.tw` | `admin123` |
+
+---
+
+## 💻 How to Run Locally
+
+1. Clone or download this repository.
+2. Open `index.html` in any modern browser (Chrome, Firefox, Safari, Edge).
+3. No build step, no server, no npm install required.
+
+> 📝 **Note:** On first load, `js/seed.js` automatically populates `localStorage` with demo users, destinations, forum posts, and activity log data.
+
+To reset all data to factory settings, open your browser console (`F12` -> Console) and run:
+```js
+localStorage.clear(); location.reload();
