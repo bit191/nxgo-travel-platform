@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations — Nxgo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="destinations">
+
+  <nav id="navbar"></nav>
+
+  <section class="hero-dest">
+    <div class="hero-dest-content">
+      <h1>Where real travel meets, real impact</h1>
+      <div class="hero-dest-actions">
+        <a href="login.html" class="text-link" style="color:white">Login</a>
+        <a href="register.html" class="btn btn-teal">Register</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="activity-row" id="activity-row"></div>
+
+  <!-- Taichung Discovery -->
+  <section class="section">
+    <div class="section-inner discovery-taichung">
+      <div>
+        <p class="location-pin">📍 You're in Taichung</p>
+        <p class="discovery-label">Discovery</p>
+        <h2 class="section-title">Welcome to <span class="accent-gold">Taichung</span></h2>
+        <p class="see-more" style="text-align:left;margin-top:24px"><a href="destinations.html?q=Taichung" class="text-link">must try in Taichung →</a></p>
+      </div>
+      <div class="taichung-collage">
+        <img class="side-1" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=500&q=75" alt="Colorful flowers in Taichung park" loading="lazy" decoding="async">
+        <img class="side-2" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=75" alt="Outdoor dining in Taichung" loading="lazy" decoding="async">
+        <img class="main-img" src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=700&q=75" alt="Rainbow Village painted alley in Taichung" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section">
+    <div class="section-inner stats-section">
+      <div class="stats-image">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=75" alt="Sunlit forest trail in Taiwan mountains" loading="lazy" decoding="async" width="800" height="400">
+      </div>
+      <div class="stats-text">
+        <div class="stats-numbers">
+          <div class="stat-block">
+            <div class="stat-num" id="stat-travellers">0</div>
+            <div class="stat-label">Travellers</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num" id="stat-activities">0</div>
+            <div class="stat-label">Activities</div>
+          </div>
+        </div>
+        <h3>Make every stop count, for you and the planet</h3>
+        <p>Join the <span class="highlight">challenge</span> and <span class="highlight">achieve</span> a lot of badges!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adventure Hub — Search + CRUD -->
+  <section class="section hub-section">
+    <div class="section-inner">
+      <div class="adventure-hub">
+        <div class="hub-header">
+          <p class="hub-eyebrow">✦ Nxgo Discovery Engine</p>
+          <h2 class="hub-title">Find your next <span class="accent-gold">adventure</span></h2>
+          <p class="hub-sub">Scan Taiwan, pick your vibe, and launch something epic.</p>
+        </div>
+
+        <!-- Futuristic search -->
+        <div class="hub-search-wrap">
+          <div class="hub-search-glow"></div>
+          <div class="hub-search">
+            <svg class="hub-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="search-keyword" placeholder="Where to next? Try Jiufen, night markets, hiking…" aria-label="Search adventures">
+            <button type="button" class="hub-search-btn" id="search-btn">Scan</button>
+          </div>
+        </div>
+
+        <!-- Chip filters -->
+        <div class="hub-filters">
+          <div class="filter-group">
+            <span class="filter-label">Category</span>
+            <div class="filter-chips" id="category-chips">
+              <button type="button" class="filter-chip active" data-value="all">All</button>
+              <button type="button" class="filter-chip" data-value="Eco">🌿 Eco</button>
+              <button type="button" class="filter-chip" data-value="Adventure">⛰ Adventure</button>
+              <button type="button" class="filter-chip" data-value="Food">🍜 Food</button>
+              <button type="button" class="filter-chip" data-value="Culture">🏮 Culture</button>
+            </div>
+            <select id="search-category" class="sr-only" aria-hidden="true" tabindex="-1">
+              <option value="all">All</option>
+              <option value="Eco">Eco</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Food">Food</option>
+              <option value="Culture">Culture</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Vibe</span>
+            <div class="filter-chips filter-chips-scroll" id="interest-chips">
+              <button type="button" class="filter-chip active" data-value="all">All vibes</button>
+            </div>
+            <select id="search-interest" class="sr-only" aria-hidden="true" tabindex="-1">
+              <option value="all">All</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Results header -->
+        <div class="hub-results-head">
+          <p class="hub-results-count" id="results-count">Loading adventures…</p>
+          <div class="hub-results-actions">
+            <button type="button" class="hub-surprise-btn" id="surprise-btn">🎲 Surprise me</button>
+            <button type="button" class="hub-launch-btn" id="toggle-form-btn">
+              <span class="launch-icon">+</span> Launch new adventure
+            </button>
+          </div>
+        </div>
+
+        <!-- Collapsible CRUD form -->
+        <div class="hub-form-panel" id="hub-form-panel" hidden>
+          <div class="hub-form-inner">
+            <h3 class="hub-form-title" id="form-title">✦ New Mission Brief</h3>
+            <form class="hub-form" id="crud-form">
+              <input type="hidden" id="edit-id" value="">
+              <div class="hub-form-grid">
+                <div class="hub-field">
+                  <label for="pkg-name">Mission name</label>
+                  <input type="text" id="pkg-name" required placeholder="e.g. Jiufen Lantern Walk">
+                </div>
+                <div class="hub-field">
+                  <label for="pkg-location">📍 Location</label>
+                  <input type="text" id="pkg-location" required placeholder="e.g. New Taipei, Taichung, Kenting">
+                </div>
+                <div class="hub-field">
+                  <label for="pkg-category">Type</label>
+                  <select id="pkg-category" required>
+                    <option value="Eco">🌿 Eco</option>
+                    <option value="Adventure">⛰ Adventure</option>
+                    <option value="Food">🍜 Food</option>
+                    <option value="Culture">🏮 Culture</option>
+                  </select>
+                </div>
+                <div class="hub-field">
+                  <label for="pkg-date">Date</label>
+                  <input type="date" id="pkg-date" required>
+                </div>
+                <div class="hub-field">
+                  <label for="pkg-status">Status</label>
+                  <select id="pkg-status">
+                    <option value="active">🟢 Live</option>
+                    <option value="inactive">⚫ Paused</option>
+                  </select>
+                </div>
+                <div class="hub-field">
+                  <label for="pkg-interests">Vibes</label>
+                  <input type="text" id="pkg-interests" placeholder="Hiking, Foodie, Photography">
+                </div>
+                <div class="hub-field hub-field-wide">
+                  <label for="pkg-events">What's the plan?</label>
+                  <textarea id="pkg-events" required placeholder="Tell travelers what makes this stop unforgettable…"></textarea>
+                </div>
+                <div class="hub-field hub-field-wide">
+                  <label for="pkg-image-url">Cover photo (optional URL)</label>
+                  <input type="url" id="pkg-image-url" placeholder="https://images.unsplash.com/… or paste any image link">
+                </div>
+                <div class="hub-field hub-field-wide">
+                  <label for="pkg-image-file">Or upload a photo</label>
+                  <input type="file" id="pkg-image-file" accept="image/*">
+                  <p class="hub-field-hint">Max 500 KB · JPG, PNG, or WebP</p>
+                </div>
+              </div>
+              <div class="hub-form-preview" id="image-preview" hidden>
+                <img id="preview-img" src="" alt="Preview">
+                <span class="preview-label">Auto-matched to location</span>
+              </div>
+              <div class="hub-form-actions">
+                <button type="submit" class="btn btn-gold" id="crud-submit">🚀 Launch adventure</button>
+                <button type="button" class="btn btn-ghost btn-sm" id="crud-cancel" hidden>Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="adventure-grid" id="results-grid"></div>
+
+        <div class="hub-empty" id="no-results" hidden>
+          <div class="hub-empty-icon">🔭</div>
+          <h4>No adventures on the radar</h4>
+          <p>Try a different keyword or vibe — or launch your own!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+
+  <script src="js/packages-extra.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/migrate.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/engage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/destinations.js"></script>
+</body>
+</html>

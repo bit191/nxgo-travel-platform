@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile — Nxgo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+
+  <nav id="navbar"></nav>
+
+  <div class="profile-hero">
+    <img class="profile-banner" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=75" alt="Profile banner with jazz poster aesthetic" loading="eager" decoding="async" width="1400" height="320">
+    <p class="profile-banner-overlay">" sleep, eat, travel, repeat</p>
+  </div>
+
+  <div class="profile-info" id="profile-info"></div>
+
+  <div class="profile-stats">
+    <div class="stats-bar">
+      <div class="stat-item"><div class="num">270</div><div class="lbl">Buddies</div></div>
+      <div class="stat-item"><div class="num">30</div><div class="lbl">Volunteers</div></div>
+      <div class="stat-item"><div class="num">27</div><div class="lbl">Adventures</div></div>
+    </div>
+  </div>
+
+  <section class="profile-badges-section">
+    <div class="section-inner">
+      <h2 class="section-title">Your <span class="accent-gold">Badges</span></h2>
+      <p class="section-sub">Collect stamps as you explore — unlock them all!</p>
+      <div class="badges-grid" id="profile-badges"></div>
+    </div>
+  </section>
+
+  <section class="profile-wishlist-section">
+    <div class="section-inner">
+      <h2 class="section-title">Bucket <span class="accent-gold">List</span></h2>
+      <div class="profile-wishlist" id="profile-wishlist"></div>
+    </div>
+  </section>
+
+  <section class="memories-section">
+    <div class="memories-header">
+      <button type="button" class="btn btn-gold btn-sm" id="memories-filter-btn">Recent activities</button>
+      <button type="button" class="text-link memory-upload-btn" id="upload-memory-btn">+ Upload Memories</button>
+      <input type="file" id="memory-file-input" accept="image/*" hidden>
+    </div>
+    <div class="memories-grid" id="memories-grid"></div>
+    <p class="memories-label">Your Memories</p>
+  </section>
+
+  <!-- Forum / Stories -->
+  <section class="stories-section">
+    <div class="stories-panel">
+      <h2>My Stories!</h2>
+      <button class="btn btn-gold btn-sm" id="toggle-story-form" style="margin-bottom:24px">+ Add stories</button>
+
+      <form class="story-form" id="story-form" style="display:none">
+        <input type="text" id="story-title" placeholder="Story title" required aria-label="Story title">
+        <textarea id="story-content" placeholder="Share your travel story or ask a question…" required aria-label="Story content"></textarea>
+        <button type="submit" class="btn btn-teal btn-sm">Post Story</button>
+      </form>
+
+      <div id="stories-feed"></div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+
+  <script src="js/packages-extra.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/migrate.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/engage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

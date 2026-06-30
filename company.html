@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company — Nxgo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="company" class="info-page">
+
+  <nav id="navbar"></nav>
+
+  <header class="info-hero company-hero">
+    <p class="info-eyebrow">The team behind nxgo</p>
+    <h1>Small team, <span class="accent-gold">big island dreams</span></h1>
+    <p>We're a Taipei-based crew of designers, developers, and travelers obsessed with making Taiwan accessible to everyone.</p>
+  </header>
+
+  <div class="info-body">
+    <div class="company-stats">
+      <div class="company-stat">
+        <div class="num">6.5K</div>
+        <div class="lbl">Active travelers</div>
+      </div>
+      <div class="company-stat">
+        <div class="num">503</div>
+        <div class="lbl">Activities listed</div>
+      </div>
+      <div class="company-stat">
+        <div class="num">22</div>
+        <div class="lbl">Cities covered</div>
+      </div>
+      <div class="company-stat">
+        <div class="num">2019</div>
+        <div class="lbl">Founded in Taipei</div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="text-align:center;margin-bottom:40px">Meet the crew</h2>
+    <div class="team-grid team-grid-3">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=75" alt="Portrait of Amra" loading="lazy">
+        <div class="team-info">
+          <h4>Amra</h4>
+          <p class="team-role">Co-founder &amp; Product Lead</p>
+          <p>Shapes the Nxgo vision — from buddy matching to eco adventures across Taiwan.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=75" alt="Portrait of Baizhi" loading="lazy">
+        <div class="team-info">
+          <h4>Baizhi</h4>
+          <p class="team-role">Lead Developer &amp; Data Systems</p>
+          <p>Built the platform end-to-end — auth, CRUD, analytics, and localStorage architecture.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=75" alt="Portrait of Esia" loading="lazy">
+        <div class="team-info">
+          <h4>Esia</h4>
+          <p class="team-role">Design &amp; Community Lead</p>
+          <p>Crafted the editorial look, gallery experience, and traveler stories on Profile.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Our mission</h2>
+        <p>Nxgo exists to make Taiwan the most welcoming, sustainable, and exciting destination in Asia — one buddy, one adventure, one story at a time.</p>
+        <p>We partner with local communities, eco-organizations, and independent guides to create experiences that benefit travelers and the island alike.</p>
+        <p>Based in Taipei, with roots across Taichung, Tainan, Kaohsiung, and the east coast.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=75" alt="Misty mountains in Taiwan" loading="lazy" decoding="async">
+    </div>
+
+    <div class="contact-card">
+      <h3>Get in touch</h3>
+      <p>Partnerships, press, or just want to say hi? We'd love to hear from you.</p>
+      <p style="color:var(--teal-light);font-weight:600;margin-bottom:24px">hello@nxgo.tw · Taipei, Taiwan</p>
+      <a href="mailto:hello@nxgo.tw" class="btn btn-teal">Send us an email</a>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+
+  <script src="js/packages-extra.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/migrate.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/engage.js"></script>
+  <script src="js/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => NxgoApp.initPage('company', 'company'));</script>
+</body>
+</html>

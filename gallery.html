@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Nxgo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gallery">
+
+  <nav id="navbar"></nav>
+
+  <section class="gallery-hero">
+    <div class="nxgo-logo hero-logo" style="margin:0 auto 32px">
+      <span class="logo-nx">nx<span class="logo-dot-red"></span></span>
+      <span class="logo-go">g<span class="logo-dot-blue"></span>o</span>
+    </div>
+
+    <div class="gallery-carousel-wrap">
+      <button type="button" class="carousel-arrow carousel-arrow-left" id="carousel-prev" aria-label="Previous slide">‹</button>
+      <div class="gallery-carousel" id="carousel-track"></div>
+      <button type="button" class="carousel-arrow carousel-arrow-right" id="carousel-next" aria-label="Next slide">›</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+
+    <h2>Welcome to <span class="accent-gold">Taiwan</span></h2>
+    <p class="gallery-sub">Skip the boring, hit the epic, and make every stop <strong>the stop.</strong></p>
+  </section>
+
+  <!-- Taiwan Roulette -->
+  <section class="section gallery-fun-section" id="taiwan-roulette">
+    <div class="section-inner">
+      <p class="discovery-label">Feeling lucky?</p>
+      <h2 class="section-title">Taiwan <span class="accent-gold">Roulette</span></h2>
+      <p class="section-sub">Spin the wheel and let fate pick your next adventure across the island.</p>
+      <div class="roulette-wrap">
+        <div class="roulette-wheel" id="roulette-wheel">
+          <div class="roulette-pointer">▼</div>
+          <div class="roulette-spinner" id="roulette-spinner"></div>
+        </div>
+        <div class="roulette-side">
+          <p class="roulette-result" id="roulette-result">Ready to spin?</p>
+          <button type="button" class="btn btn-gold" id="roulette-spin">🎲 Spin the wheel</button>
+          <a href="destinations.html" class="btn btn-ghost btn-sm" id="roulette-go" hidden>Explore this adventure →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Duel -->
+  <section class="section gallery-fun-section">
+    <div class="section-inner">
+      <p class="discovery-label">This or that?</p>
+      <h2 class="section-title">Photo <span class="accent-gold">Duel</span></h2>
+      <p class="section-sub">Two Taiwan vibes enter — you pick the winner. Build your taste profile!</p>
+      <div class="photo-duel" id="photo-duel">
+        <button type="button" class="duel-card" id="duel-left"></button>
+        <span class="duel-vs">VS</span>
+        <button type="button" class="duel-card" id="duel-right"></button>
+      </div>
+      <p class="duel-score" id="duel-score">Pick your favorite to start!</p>
+      <button type="button" class="gallery-shuffle-btn" id="duel-next" hidden>Next duel →</button>
+    </div>
+  </section>
+
+  <!-- Filter + shuffle controls -->
+  <div class="gallery-controls">
+    <div class="gallery-filters" id="gallery-filters"></div>
+    <button type="button" class="gallery-shuffle-btn" id="shuffle-btn">🔀 Shuffle vibes</button>
+  </div>
+
+  <div class="gallery-masonry" id="gallery-masonry"></div>
+  <p class="gallery-scroll-hint">Scroll thru me to find out!</p>
+
+  <div class="quote-grid" id="quote-grid"></div>
+
+  <!-- Lightbox -->
+  <div class="gallery-lightbox" id="gallery-lightbox" hidden>
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+      <div class="lightbox-reactions" id="lightbox-reactions">
+        <button type="button" class="reaction-btn" data-emoji="🔥" aria-label="Fire">🔥</button>
+        <button type="button" class="reaction-btn" data-emoji="😍" aria-label="Love">😍</button>
+        <button type="button" class="reaction-btn" data-emoji="🌟" aria-label="Star">🌟</button>
+        <button type="button" class="reaction-btn" data-emoji="🤙" aria-label="Shaka">🤙</button>
+      </div>
+      <span class="lightbox-counter" id="lightbox-counter"></span>
+    </div>
+    <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+  </div>
+
+  <footer id="footer"></footer>
+
+  <script src="js/packages-extra.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/migrate.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/engage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

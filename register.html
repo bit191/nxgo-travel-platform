@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — Nxgo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="auth-page">
+    <div class="auth-container register-layout">
+      <!-- Left: Login prompt -->
+      <div class="auth-panel auth-panel-grey">
+        <h2>Have an account?</h2>
+        <p class="auth-sub">Let's log to your account!</p>
+        <a href="login.html" class="btn btn-teal">Log in</a>
+      </div>
+
+      <!-- Right: Register form -->
+      <div class="auth-panel auth-panel-teal">
+        <h2>Don't have an account?</h2>
+        <p class="auth-sub">Let's create an account!</p>
+
+        <div class="social-icons">
+          <div class="social-icon" title="Google">G</div>
+          <div class="social-icon" title="Facebook">f</div>
+          <div class="social-icon" title="TikTok">♪</div>
+          <div class="social-icon" title="Instagram">◎</div>
+        </div>
+
+        <form class="auth-form" id="register-form">
+          <div class="auth-error" id="register-error"></div>
+          <input type="text" id="reg-username" placeholder="Enter your name!" required aria-label="Username">
+          <input type="email" id="reg-email" placeholder="Enter your email!" required aria-label="Email">
+          <input type="password" id="reg-password" placeholder="Enter your password!" required minlength="6" aria-label="Password">
+          <button type="submit" class="btn btn-white">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/packages-extra.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/migrate.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (NxgoAuth.isLoggedIn()) {
+        window.location.href = 'profile.html';
+        return;
+      }
+
+      document.getElementById('register-form').addEventListener('submit', e => {
+        e.preventDefault();
+        const username = document.getElementById('reg-username').value.trim();
+        const email = document.getElementById('reg-email').value.trim();
+        const password = document.getElementById('reg-password').value;
+        const errorEl = document.getElementById('register-error');
+
+        const result = NxgoAuth.register({ username, email, password });
+        if (result.error) {
+          errorEl.textContent = result.error;
+          return;
+        }
+
+        window.location.href = 'profile.html';
+      });
+    });
+  </script>
+</body>
+</html>

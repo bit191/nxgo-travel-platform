@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nxgo — Your Taiwan Buddy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <nav id="navbar"></nav>
+
+  <!-- Hero -->
+  <section class="hero-home">
+    <div class="nxgo-logo hero-logo" aria-label="Nxgo">
+      <span class="logo-nx">nx<span class="logo-dot-red"></span></span>
+      <span class="logo-go">g<span class="logo-dot-blue"></span>o</span>
+    </div>
+    <h1>Your Taiwan Buddy</h1>
+    <p class="hero-tagline">Discover hidden gems, find travel buddies, and make every stop count across Taiwan.</p>
+    <form class="search-bar" id="hero-search-form">
+      <input type="text" id="hero-search" placeholder="What are you looking for?" aria-label="Search destinations">
+      <button type="submit" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+    </form>
+  </section>
+
+  <!-- Daily Challenge + Featured Adventures -->
+  <section class="section section-fun" id="daily-challenge-section">
+    <div class="section-inner">
+      <div class="daily-challenge-card" id="daily-challenge-card"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <p class="discovery-label">Hot right now</p>
+      <h2 class="section-title">Featured <span class="accent-gold">Adventures</span></h2>
+      <p class="section-sub">Hand-picked missions from the Nxgo crew — spin the wheel if you can't decide!</p>
+      <div class="featured-scroll-wrap">
+        <div class="featured-scroll" id="featured-adventures"></div>
+      </div>
+      <p class="see-more"><a href="gallery.html#taiwan-roulette" class="text-link">Can't decide? Spin Taiwan Roulette →</a></p>
+    </div>
+  </section>
+
+  <!-- Discovery -->
+  <section class="section">
+    <div class="section-inner">
+      <p class="discovery-label">Premium Recovery</p>
+      <h2 class="section-title">Discovery</h2>
+      <div class="discovery-grid">
+        <a href="destinations.html?category=Food" class="discovery-card">
+          <span class="card-arrow">↗</span>
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><ellipse cx="20" cy="24" rx="14" ry="8"/><path d="M8 24c0-8 5-14 12-14s12 6 12 14"/></svg>
+          <span class="card-label">Food recommendation</span>
+        </a>
+        <a href="profile.html" class="discovery-card">
+          <span class="card-arrow">↗</span>
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><circle cx="16" cy="14" r="6"/><circle cx="28" cy="18" r="5"/><path d="M6 32c0-6 4-10 10-10s10 4 10 10"/></svg>
+          <span class="card-label">Find a travel buddy</span>
+        </a>
+        <a href="destinations.html" class="discovery-card">
+          <span class="card-arrow">↗</span>
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><circle cx="20" cy="18" r="10"/><path d="M20 8v4M20 28v4M10 18h4M26 18h4"/></svg>
+          <span class="card-label">Explore places</span>
+        </a>
+        <a href="gallery.html" class="discovery-card">
+          <span class="card-arrow">↗</span>
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><circle cx="20" cy="20" r="14"/><path d="M20 12v8l6 4"/></svg>
+          <span class="card-label">Find your party</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Destinations -->
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Best Destinations</h2>
+      <p class="section-sub">Discover the world's best regions and landscapes. Your adventure starts here.</p>
+      <div class="dest-grid" id="dest-grid"></div>
+      <p class="see-more"><a href="destinations.html" class="text-link">See More →</a></p>
+    </div>
+  </section>
+
+  <!-- Interest -->
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Interest</h2>
+      <div class="interest-pills" id="interest-pills"></div>
+      <p class="see-more"><a href="destinations.html" class="text-link">View all →</a></p>
+    </div>
+  </section>
+
+  <!-- Mid CTA -->
+  <section class="section cta-mid">
+    <div class="section-inner">
+      <p style="max-width:600px;margin:0 auto 16px;color:rgba(255,255,255,0.6)">Nxgo is your ultimate guide to Taiwan — from night markets to mountain trails, we connect you with locals and fellow travelers who share your passion.</p>
+      <div class="cta-image">
+        <img src="" alt="Neon-lit Taipei street at night" loading="lazy" decoding="async" width="1200" height="400">
+        <a href="company.html" class="btn btn-red">Contact Us</a>
+      </div>
+      <p class="see-more"><a href="gallery.html" class="text-link">Follow us →</a></p>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-bottom">
+        <div>
+          <h2>Are you ready?</h2>
+          <p>Your adventure begins in Taiwan…</p>
+        </div>
+        <a href="destinations.html" class="btn btn-teal">Explore now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+
+  <script src="js/packages-extra.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/migrate.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/engage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
